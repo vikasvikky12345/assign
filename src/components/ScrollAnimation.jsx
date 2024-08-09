@@ -27,7 +27,6 @@ const ScrollAnimation = () => {
     return (
         <div className="scroll-container flex flex-col md:flex-row overflow-x-scroll space-y-6 md:space-y-0 md:space-x-10 mt-10">
             <div className="scroll-animation-container flex items-center text-center justify-center flex-shrink-0 w-full md:w-3/5 h-[300px] md:h-[500px] relative border border-gray-300 rounded-2xl">
-                {/* Video Container */}
                 <div className="video-container absolute inset-0 flex justify-center items-center z-10 overflow-hidden rounded-2xl">
                     <video
                         className="w-full h-full object-cover"
@@ -38,7 +37,6 @@ const ScrollAnimation = () => {
                     />
                 </div>
 
-                {/* Text Container */}
                 <div className="relative w-full h-full flex flex-col pt-6 bg-white z-1 border border-gray-300 rounded-2xl px-4 md:px-6">
                     <h1 className="text-lg md:text-2xl">Prioritise performance</h1>
                     <h5 className="text-sm md:text-lg text-gray-400 mt-2">Chrome is built for performance. Optimise your experience with features like Energy Saver and Memory Saver.</h5>

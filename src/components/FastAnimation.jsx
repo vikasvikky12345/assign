@@ -7,7 +7,6 @@ const FastAnimation = () => {
   const textRef = useRef(null);
   const [contentIndex, setContentIndex] = useState(0);
 
-  // Define contents with icons
   const contents = [
     { text: 'Fast', icon: <FaBolt /> },
     { text: 'Safe', icon: <FaShieldAlt /> },
@@ -18,28 +17,26 @@ const FastAnimation = () => {
   const textColors = ['green', 'blue', 'red'];
 
   useEffect(() => {
-    // Background color animation for the rectangular div
     const colorTimeline = gsap.timeline({ repeat: -1 });
 
     divColors.forEach((color) => {
       colorTimeline
         .to(boxRef.current, { backgroundColor: color, duration: 2 })
-        .to(boxRef.current, { delay: 1.6 }); // To sync with text change
+        .to(boxRef.current, { delay: 1.6 });
     });
 
-    // Text animation and color change
     const textTimeline = gsap.timeline({ repeat: -1 });
 
     contents.forEach((content, index) => {
       textTimeline
-        .set(textRef.current, { y: '100%', opacity: 0, color: textColors[index] }) // Start text from below the box
+        .set(textRef.current, { y: '100%', opacity: 0, color: textColors[index] })
         .call(() => setContentIndex(index))
-        .to(textRef.current, { y: '-50%', opacity: 1, duration: 1.8, ease: 'power4.in' }) // Move text to center
-        .to(textRef.current, { delay: 1.8 }); // Wait before the next transition
+        .to(textRef.current, { y: '-50%', opacity: 1, duration: 1.8, ease: 'power4.in' })
+        .to(textRef.current, { delay: 1.8 }); 
     });
 
     return () => {
-      colorTimeline.kill(); // Clean up the timeline on component unmount
+      colorTimeline.kill(); 
       textTimeline.kill();
     };
   }, []);
@@ -69,7 +66,7 @@ const FastAnimation = () => {
           transform: 'translateY(50%)',
           display: 'flex',
           alignItems: 'center',
-          gap: '8px', // Space between icon and text
+          gap: '8px', 
         }}
       >
         {contents[contentIndex].icon}

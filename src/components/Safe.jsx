@@ -17,11 +17,11 @@ function Safe() {
         ease: 'power3.out',
         scrollTrigger: {
           trigger: '.animate-div',
-          start: 'top 80%', // Adjust based on when you want the animation to start
-          end: 'top 50%', // Adjust based on when you want the animation to end
+          start: 'top 50%', 
+          end: 'top 50%', 
           scrub: true,
         },
-        stagger: 0.2, // Adds a delay between the animations of the icon and text
+        stagger: 0.2, 
       }
     );
   }, []);
@@ -30,7 +30,6 @@ function Safe() {
     <>
       <div className="flex flex-col lg:flex-row items-center justify-center gap-3 lg:gap-6 mt-20">
         <h1 className="text-4xl lg:text-6xl font-bold">Stay</h1>
-        {/* Animated content inside the div */}
         <div className="animate-div w-[120px] h-[50px] lg:w-[150px] lg:h-[60px] bg-blue-200 rounded-full px-4 py-3 lg:px-6 lg:py-4 flex items-center justify-evenly">
           <FaShieldAlt className="animate-icon text-blue-700 text-xl lg:text-2xl" />
           <h1 className="animate-text text-xl lg:text-2xl text-blue-700">safe</h1>

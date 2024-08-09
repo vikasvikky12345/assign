@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { FaBars, FaChevronDown } from 'react-icons/fa'; // You can use any icon library
+import { FaBars, FaChevronDown } from 'react-icons/fa';
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -48,8 +48,8 @@ function Navbar() {
               {isSupportOpen && (
                 <div className="absolute left-0 mt-2 w-48 bg-white border border-gray-200 shadow-lg">
                   <ul className="flex flex-col">
-                    <li className="px-4 py-2 hover:bg-gray-100">Tips from Google</li>
-                    <li className="px-4 py-2 hover:bg-gray-100">Support</li>
+                    <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">Tips from Google</li>
+                    <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">Support</li>
                   </ul>
                 </div>
               )}
@@ -60,7 +60,6 @@ function Navbar() {
           <FaBars className="text-2xl cursor-pointer" onClick={() => setIsOpen(!isOpen)} />
         </div>
       </div>
-      {/* Mobile Menu */}
       {isOpen && (
         <div className="lg:hidden bg-white shadow-md fixed top-0 left-0 w-3/4 h-full z-50">
           <ul className="flex flex-col items-start px-8 py-4 gap-4">

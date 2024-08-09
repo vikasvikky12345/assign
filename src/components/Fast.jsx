@@ -17,11 +17,11 @@ function Fast() {
         ease: 'power3.out',
         scrollTrigger: {
           trigger: '.animate-div',
-          start: 'top 80%', // Adjust based on when you want the animation to start
-          end: 'top 50%', // Adjust based on when you want the animation to end
+          start: 'top 80%', 
+          end: 'top 50%', 
           scrub: true,
         },
-        stagger: 0.2, // Adds a delay between the animations of the icon and text
+        stagger: 0.2, 
       }
     );
   }, []);
